@@ -2,7 +2,7 @@ name: Yunchef Lunch Scheduler
 
 on:
   schedule:
-    - cron: '2 3 * * 1-5'
+    - cron: '10 3 * * 1-5'
   workflow_dispatch:
 
 jobs:
