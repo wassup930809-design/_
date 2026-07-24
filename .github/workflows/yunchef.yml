@@ -1,0 +1,14 @@
+name: Yunchef Lunch Scheduler
+
+on:
+  schedule:
+    - cron: '59 11 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  call-apps-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Apps Script
+        run: |
+          curl -L "${{ secrets.YUNCHEF_URL }}"
